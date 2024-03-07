@@ -1,26 +1,32 @@
+:root {
+    --color-primario: #38220f; /* Marrón oscuro */
+    --color-secundario: #d6a26e; /* Marrón claro */
+    --color-texto: #ffedc5; /* Crema */
+    --color-texto-hover: #f8f9fa; /* Blanco ligero */
+    --fuente-primaria: 'Slabo 27px', serif;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Slabo 27px', serif;
+    font-family: var(--fuente-primaria);
 }
-
-
 
 header {
-    background: #38220f; /* Dark background for the header */
-    max-width: 100%;  /* hace que la imagen sea responsive y no exceda el ancho del contenedor */
-    height: auto;     /* mantiene la proporción de la imagen */
-    margin: 0 auto 10px; /* centra la imagen y agrega un margen inferior */
-    color: white;
+    background: var(--color-primario);
+    color: var(--color-texto);
     padding: 10px 0;
+    position: relative;
+    z-index: 10; /* Asegúrate de que el encabezado esté por encima de otros elementos */
 }
+
 
 .header-index { /* Header Index */
     display: block;
     max-width: 100%;  /* hace que la imagen sea responsive y no exceda el ancho del contenedor */
     height: 250px;     /* mantiene la proporción de la imagen */
     margin: 0 auto 0px; /* centra la imagen y agrega un margen inferior */
-    padding: auto 10px 0; /* centra la imagen y agrega */
+    padding: auto 30px 0; /* centra la imagen y agrega */
   }
 
 nav {
@@ -33,6 +39,9 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -41,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-texto);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -49,63 +58,41 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:active {
-    color: #f8f9fa; /* Light color on hover */
+    color: var(--color-texto-hover);
 }
 
-.hero-image {
-  position: relative;
-  text-align: center;
-  color: white;
+#currentDateTime {
+    font-size: 20px;
+    color: #5a5a5a;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px auto;
+    width: 200px;
 }
-
-  
-  #currentDateTime {
-    font-size: 20px; /* Tamaño de fuente */
-    color: #5a5a5a; /* Color del texto */
-    background-color: #f0f0f0; /* Color de fondo */
-    border: 1px solid #dcdcdc; /* Borde alrededor del elemento */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Alineación del texto */
-    margin: 10px; /* Margen alrededor del elemento */
-    width: 200px; /* Ancho del elemento */
-    display: block; /* Esto hará que ocupe su propia línea */
-    margin-left: auto; /* Estos dos márgenes automáticos centrarán */
-    margin-right: auto; /* el elemento si su contenedor es más ancho */
-  }
-  
 
 .bxslider-container {
-    max-width: 1000px;
+    max-width: 100%;
     margin: 20px auto;
 }
 
-.google-map {
-    width: 300px;
-    height: 200px;
-    border: 0;
-}
-
 footer {
-    background: #38220f; /* Un marrón oscuro para el fondo del footer */
-    color: #ffedc5; /* Un color crema para el texto */
+    background: var(--color-primario);
+    color: var(--color-texto);
     padding: 20px 0;
-    font-size: 0.8em;
-}
-
-footer p {
-    margin: 5px 0;
+    text-align: center;
 }
 
 footer a {
-    color: #d4a373; /* Un color marrón claro para los enlaces */
+    color: var(--color-secundario);
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #f3e9dd; /* Un color crema más claro al pasar el ratón */
+    color: var(--color-texto-hover);
 }
 
 .business-section {
@@ -125,93 +112,335 @@ footer a:hover {
 }
 
 .image-container {
-    flex: 1; /* Adjust the flex ratio to suit your design */
-    padding-right: 20px; /* Add spacing between the image and the info */
+    flex: 1.5; /* Aumentar el tamaño del carrusel de imágenes */
+    padding: 0 20px; /* Añadir algo de espacio alrededor */
 }
 
+
+/* Asegura que el slider llene el contenedor en todas las resoluciones */
 .image-container img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 500px; /* Limit the image size */
+    max-width: 100%; /* Esto hará que la imagen sea completamente responsiva */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
 }
 
 .info-container {
-    flex: 2; /* Adjust the flex ratio to suit your design */
-    padding-left: 20px; /* Add spacing between the info and the image */
+    flex: 1; /* Reducir un poco el tamaño de la información */
+    padding: 0 20px; /* Añadir algo de espacio alrededor */
 }
 
 .info-container h2 {
-    margin-top: 0;
+    font-size: 1.75rem; /* Aumentar el tamaño de la fuente para los títulos */
+    color: var(--color-secundario); /* Cambiar el color para destacar */
+    margin: 20px 0; /* Ajustar los márgenes */
 }
+
 
 .info-container p {
     font-size: 1em;
 }
 
-/* Responsive adjustments */
+/* Media queries para dispositivos más pequeños */
 @media (max-width: 768px) {
-    .business-section,
-    .content-wrapper {
+    .business-section, .content-wrapper {
         flex-direction: column;
     }
 
-    .image-container,
-    .info-container {
+    /* Asegura que el mapa y el cuadro de ubicación se centren correctamente */
+    .info-container,
+    .image-container {
+        width: 100%;
         padding-right: 0;
         padding-left: 0;
+        margin-top: 20px; /* Espacio adicional en la parte superior para la separación */
+    }
+
+    .info-container iframe {
+        width: 600px; /* Ajustar el ancho del iframe al contenedor */
+        height: 400px; /* Asegurar que la altura sea proporcional */
+        border: none; /* Remover el borde para un look más limpio */
+        border-radius: 8px; /* Añadir bordes redondeados para consistencia */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra suave para destacar el mapa */
+      
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Añade espacio entre las opciones del menú */
     }
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 40px;
-    background: #fff8f0; /* Un color crema claro */
-    border-radius: 6px;
-    color: #50372a; /* Un marrón oscuro para el texto */
-  }
-  
-  .contact-form h2 {
+.menu-section {
+    background-color: #efebe9; /* Un color de fondo claro */
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
-    color: #8B4513; /* Un tono marrón medio para los títulos */
   }
   
-  .contact-form form {
+  .menu-title {
+    font-size: 2.5em; /* Ajustar el tamaño del título */
+    margin-bottom: 20px;
+    color: var(--color-primario); /* Usando una variable de color definida previamente */
+    font-family: var(--fuente-primaria); /* Usando una variable de fuente definida previamente */
+  }
+  
+  .menu-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
-  .contact-form label {
-    margin-bottom: 5px;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    padding: 15px 10px;
+  .menu-category {
+    width: 45%; /* Ajusta este porcentaje según prefieras */
     margin-bottom: 20px;
-    border-radius: 3px;
-    border: 1px solid #a88760; /* Un color marrón claro para el borde */
-    background-color: #fffaf2; /* Un color crema muy claro para el fondo */
   }
   
-  .contact-form textarea {
-    height: 150px;
-    resize: none; /* Deshabilitar redimensionamiento */
+  .menu-category h3 {
+    font-size: 1.5em;
+    color: var(--color-primario);
+    margin-bottom: 10px;
   }
   
-  .contact-form button[type="submit"] {
-    padding: 15px;
-    background-color: #6b4e37; /* Un marrón oscuro para el botón */
-    color: #fffaf2; /* Color crema para el texto del botón */
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  .menu-category ul {
+    list-style: none;
+    padding: 0;
   }
   
-  .contact-form button[type="submit"]:hover {
-    background-color: #8B4513; /* Un marrón medio para cuando se pasa el ratón por encima */
+  .menu-category ul li {
+    font-size: 1.2em;
+    color: #333; /* Un color oscuro para el texto */
+    margin-bottom: 5px; /* Espacio entre los ítems del menú */
+    display: flex;
+    justify-content: space-between;
   }
   
+  .menu-category ul li span {
+    font-weight: bold;
+  }
+ 
+  /* Formulario de la cafetería */ 
+
+  /* Formulario de la cafetería */
+.contact-section {
+    background-color: #f9f9f9; /* Cambio a un fondo más suave */
+    padding: 50px; /* Aumento del espaciado interno */
+    max-width: 800px; /* Ancho máximo de la sección */
+    margin: 50px auto; /* Aumento del centrado y margen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más definida */
+    border-radius: 10px; /* Bordes más redondeados */
+}
+
+.contact-section h2 {
+    color: #333; /* Cambio a un color más oscuro para mayor contraste */
+    font-size: 2.2em; /* Tamaño de fuente ligeramente mayor */
+    margin-bottom: 30px; /* Aumento del espaciado debajo del título */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Cambio a disposición en columna para mejor fluidez */
+    gap: 20px; /* Espaciado entre campos */
+}
+
+.contact-form label {
+    color: #555; /* Oscurecimiento para mejor lectura */
+    font-size: 1.2em; /* Aumento del tamaño de fuente */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Ancho ajustado para ocupar el espacio completo */
+    padding: 15px; /* Mayor espaciado interno para facilidad de entrada */
+    margin-bottom: 15px; /* Reducción del espaciado inferior */
+    border: 2px solid #ddd; /* Borde más destacado */
+    border-radius: 5px; /* Suavizado de bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco para mejorar el contraste */
+    resize: none; 
+}
+
+.contact-form textarea  {height: 150px;}
+
+.contact-form input[type="submit"] {
+    padding: 15px 30px; /* Ajuste de espaciado interno */
+    background-color: var(--color-primario); /* Cambio a un color de fondo más vibrante */
+    color: #ffffff; /* Mantenimiento del color del texto */
+    font-weight: bold; /* Negrita para el texto */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    transition: all 0.3s ease; /* Suavizado de la transición */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--color-secundario); /* Oscurecimiento al pasar el ratón */
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px; /* Ajuste del espaciado interno para móviles */
+    }
+}
+
+
+/* Nosotros */
+
+.team-section {
+    text-align: center; /* Centra el texto de la sección */
+    padding: 40px 0; /* Agrega relleno arriba y abajo de la sección */
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos del equipo */
+    gap: 30px; /* Crea un espacio entre los elementos del equipo */
+}
+
+.team-member {
+    width: 300px; /* Ancho fijo para cada miembro del equipo */
+    margin: 0 15px; /* Margen a los lados para separar los elementos */
+    text-align: center; /* Centra el texto de cada miembro del equipo */
+    padding: 20px; /* Relleno alrededor de cada miembro del equipo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar las tarjetas */
+}
+
+.team-member-image {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.team-member-name {
+    font-size: 1.5em; /* Tamaño más grande para el nombre */
+    margin-bottom: 10px; /* Espacio debajo del nombre */
+}
+
+.team-member-description {
+    font-size: 1em; /* Tamaño estándar para la descripción */
+    color: #666; /* Color más suave para la descripción */
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column; /* Apila los elementos del equipo en móviles */
+    }
+
+    .team-member {
+        width: 80%; /* Los miembros del equipo ocupan más ancho en móviles */
+        margin: 20px auto; /* Centra las tarjetas y añade espacio */
+    }
+}
+
+/* Títulos de las secciones */
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-primario);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+/* Estilos para la sección de eventos */
+.events-section {
+    padding: 20px 0;
+    background-color: #fff;
+
+}
+
+.events-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--color-primario);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario);}
+
+.events-content {
+  
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.events-section .event {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+    .events-content {
+    grid-template-columns: 1fr;
+    }
+
+}
+/* Estilos para la sección de promociones especiales */
+.specials-section {
+    padding: 20px 0;
+    background-color: #f2f2f2;
+}
+
+.specials-section .special {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primario);
+}
+
+
+.specials-content {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+
+@media (max-width: 768px) {
+.specials-content {
+grid-template-columns: 1fr;
+}
+}
+
+/* Estilos generales para mejorar la apariencia */
+body {
+background-color: #eae7dc; /* Un color de fondo ligero para la página completa */
+}
+
+/* Mejorando la apariencia del contenido principal */
+.content-wrapper {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+/* Ajustes para elementos dentro de content-wrapper */
+.content-wrapper > *:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.datetime-ticker {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    text-align: center; /* o `left`, dependiendo de la preferencia */
+    padding: 5px 0; /* Ajusta el relleno según sea necesario */
+    /* Eliminar las propiedades de animación si no deseas un efecto ticker */
+}
+
+.datetime-content {
+    /* Estilos para el contenido de fecha y hora */
+    display: inline-block;
+    vertical-align: middle;
+}

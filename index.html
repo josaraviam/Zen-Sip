@@ -10,11 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet" />
-    <script src="js/main.js"></script>
-    <script src="js/slider.js"></script>
+
 </head>
 <body>
-    <img src="img/SenZip-NH.png" alt="" class="header-index">
+    <a href="index.html">
+        <img src="img/SenZip-NH.png" alt="Inicio" class="header-index">
+    </a>
 
     <header>
         <nav>
@@ -22,10 +23,15 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="menu.html">Menú</a></li>
             </ul>
         </nav>
     </header>
-    <div id="currentDateTime"></div>
+
+    <div id="currentDateTime" class="datetime-ticker">
+        <div class="datetime-content">
+        </div>
+    </div>
 
     <!-- Sección de Dirección y Horarios -->
     <section class="business-section">
@@ -36,26 +42,78 @@
                     <li><img src="img/3.jpg" alt="Imagen 2"></li>
                     <li><img src="img/4.jpg" alt="Imagen 2"></li>
                     <li><img src="img/301154776_1361118651048383_4495542201725068554_n.webp" alt="Imagen 2"></li>
-                    <!-- Añade más elementos <li> con imágenes si es necesario -->
                 </ul>
             </div>            
             <div class="info-container">
                 <h2>Zen Sip</h2>
-                <p>If we go deeper into the historic center on street 59 x between 66 y 68, you will find Manifesto Casa Tostadora Calabrese, a place specialized in coffee beans where you can find flavors and different ways to enjoy a delicious hot or cold drink. They also have a branch in Colonia Mexico on Calle8 #107 por 27 y 29.</p>
+                <p>Adentrándonos en el corazón palpitante de la ciudad, entre las calles vibrantes, descubrirás "Zen Sip", un sereno oasis para los aficionados al café. Este café único se erige como un santuario en medio del bullicio urbano, ofreciendo una mezcla armoniosa de creaciones de café tradicionales e innovadoras. Ya sea que estés de humor para una taza reconfortante de café clásico o una refrescante bebida fría, "Zen Sip" satisface todos los paladares con su diversa gama de sabores y técnicas de preparación. Es más que una simple cafetería; es un espacio donde cada sorbo te acerca a la tranquilidad, invitándote a hacer una pausa y saborear el momento en un entorno que epitomiza el zen.</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d930.5091456601167!2d-89.61216242477525!3d21.111107652291615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1709772135014!5m2!1ses-419!2smx" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!-- Your Google Maps embed link -->
                 <div class="contact-details">
-                    <span>⭐ 5 stars on google (14 comments)</span> <br>
-                    <span>📞 +521234567890</span> <br>
-                    <span>🌐 Sempere</span> <br>
-                    <span>🕒 Horario: Sábado y Domingo de 9 a.m a 7 p.m</span>
-                </div>
-            </div>
-        </div>
+                    <span>⭐ 5 estrellas en Google (152 comentarios)</span><br>
+                    <span>📞 +521234567890</span><br>
+                    <span>🌐 Km 15.5, Carr. Mérida - Progreso, 97302 Mérida, Yuc.</span><br>
+                    <span>🕒 Horario de atención:</span><br>
+                    <span>- Lunes a jueves: 7:00 AM - 10:00 PM</span><br>
+                    <span>- Viernes: 7:00 AM - 11:30 PM</span><br>
+                    <span>- Sábado: 8:00 AM - 11:30 PM</span><br>
+                    <span>- Domingo: 8:00 AM - 10:00 PM</span><br>
+
     </section>
 
+</div>
+</section>
+<!-- Sección de Eventos Próximos -->
+<section class="events-section">
+    <h2 class="events-title">Eventos Próximos</h2>
+    <div class="events-content">
+        <article class="event">
+            <h3>Noche de Jazz en Vivo</h3>
+            <p>Únete a nosotros cada viernes por la noche para disfrutar de las mejores bandas de jazz locales. Perfecto para una velada romántica o para relajarse con amigos.</p>
+            <p><strong>Fecha:</strong> Todos los viernes<br>
+            <strong>Hora:</strong> 8:00 PM - 11:00 PM</p>
+        </article>
+        <article class="event">
+            <h3>Clases de Barista</h3>
+            <p>Aprende el arte del café con nuestros baristas expertos. Desde el espresso perfecto hasta el latte art, te convertiremos en un profesional en poco tiempo.</p>
+            <p><strong>Fecha:</strong> Primer sábado de cada mes<br>
+            <strong>Hora:</strong> 10:00 AM - 1:00 PM</p>
+        </article>
+        <article class="event">
+            <h3>Degustación de Cafés del Mundo</h3>
+            <p>Descubre cafés exclusivos de todo el mundo con nuestra degustación mensual. Un viaje para tu paladar que no querrás perderte.</p>
+            <p><strong>Fecha:</strong> Segundo miércoles de cada mes<br>
+            <strong>Hora:</strong> 5:00 PM - 7:00 PM</p>
+        </article>
+        <article class="event">
+            <h3>Concierto Acústico</h3>
+            <p>Disfruta de una noche íntima con música en vivo de artistas locales. Perfecto para relajarse después de un largo día.</p>
+            <p><strong>Fecha:</strong> Todos los sábados<br>
+            <strong>Hora:</strong> 7:00 PM - 10:00 PM</p>
+        </article>
+    </div>
+</section>
+
+<!-- Sección de Promociones Especiales -->
+<section class="specials-section">
+    <h2 class="section-title">Promociones Especiales</h2>
+    <div class="specials-content">
+        <div class="special">
+            <h3>Descuento de Verano</h3>
+            <p>Disfruta de un 20% de descuento en todos nuestros frappés y bebidas heladas todos los miércoles de verano.</p>
+        </div>
+        <div class="special">
+            <h3>Happy Hour</h3>
+            <p>Entre las 5:00 PM y las 7:00 PM, compra una bebida y obtén la segunda a mitad de precio. ¡Ven y brinda con nosotros!</p>
+        </div>
+        <div class="special">
+            <h3>Descuento Anáhuac</h3>
+            <p>Obtén un descuento especial presentando tu credencial vigente de la Universidad Anáhuac.</p>
+        </div>
+    </div>
+</section>
     <footer>
         <p>© 2024 Zen Sip - Todos los derechos reservados.</p>
-        <p>Visítanos en la dirección ficticia, Ciudad, País.</p>
+        <p>Visítanos en Km 15.5, Carr. Mérida - Progreso, 97302 Mérida, Yuc.</p>
         <p>Conéctate con nosotros:</p>
         <a href="http://facebook.com/ZenSip">Facebook</a> | 
         <a href="http://instagram.com/ZenSip">Instagram</a> |
@@ -63,7 +121,8 @@
         <br>
         <a href="#top">Ir arriba</a>
     </footer>
-    <!-- Script para cargar el mapa -->
-    <script src="js/map.js"></script>
+    <!-- Script -->
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>

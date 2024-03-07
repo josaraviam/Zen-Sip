@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const dateTimeElement = document.getElementById('currentDateTime');
     setInterval(() => {
         const now = new Date();
-        dateTimeElement.innerHTML = now.toLocaleString();
-    }, 1000);
+        const dateTimeContent = document.querySelector('.datetime-content');
+        dateTimeContent.textContent = now.toLocaleString('es-ES', { hour12: true });
+    }, 0);
 });

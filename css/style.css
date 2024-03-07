@@ -160,7 +160,7 @@ footer a:hover {
         border: none; /* Remover el borde para un look más limpio */
         border-radius: 8px; /* Añadir bordes redondeados para consistencia */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra suave para destacar el mapa */
-      
+        margin-top: 20px; /* Añadir un margen superior */
     }
 
     nav ul {
@@ -221,67 +221,84 @@ footer a:hover {
  
   /* Formulario de la cafetería */ 
 
-  /* Formulario de la cafetería */
+ /* Mejoras generales para la sección de contacto */
 .contact-section {
-    background-color: #f9f9f9; /* Cambio a un fondo más suave */
-    padding: 50px; /* Aumento del espaciado interno */
-    max-width: 800px; /* Ancho máximo de la sección */
-    margin: 50px auto; /* Aumento del centrado y margen */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más definida */
-    border-radius: 10px; /* Bordes más redondeados */
+    background-color: #fafafa; /* Un fondo más claro y cálido */
+    padding: 40px; /* Espaciado ajustado */
+    max-width: 600px; /* Ancho más adecuado para la forma */
+    margin: 40px auto; /* Ajuste de margen */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
 }
 
+/* Estilos para el título del formulario */
 .contact-section h2 {
-    color: #333; /* Cambio a un color más oscuro para mayor contraste */
-    font-size: 2.2em; /* Tamaño de fuente ligeramente mayor */
-    margin-bottom: 30px; /* Aumento del espaciado debajo del título */
+    color: #38220f; /* Alineado con la paleta de colores */
+    font-size: 24px; /* Tamaño de fuente optimizado */
+    margin-bottom: 25px; /* Espaciado debajo del título */
+    font-weight: bold; /* Negrita para el título */
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column; /* Cambio a disposición en columna para mejor fluidez */
-    gap: 20px; /* Espaciado entre campos */
-}
-
+/* Estilos para las etiquetas */
 .contact-form label {
-    color: #555; /* Oscurecimiento para mejor lectura */
-    font-size: 1.2em; /* Aumento del tamaño de fuente */
+    color: #38220f; /* Color alineado con la paleta */
+    font-size: 1em; /* Tamaño de fuente estandarizado */
+    margin-bottom: 10px; /* Menor espacio debajo de las etiquetas para un diseño más compacto */
+    font-weight: bold; /* Hacer las etiquetas en negrita para mayor legibilidad */
 }
 
+/* Mejoras en los inputs y textarea */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%; /* Ancho ajustado para ocupar el espacio completo */
-    padding: 15px; /* Mayor espaciado interno para facilidad de entrada */
-    margin-bottom: 15px; /* Reducción del espaciado inferior */
-    border: 2px solid #ddd; /* Borde más destacado */
-    border-radius: 5px; /* Suavizado de bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco para mejorar el contraste */
-    resize: none; 
+    width: 100%; /* Mantener el ancho completo */
+    padding: 15px; /* Espaciado interno para facilitar la escritura */
+    margin-bottom: 20px; /* Espaciado más grande para una mejor separación de los campos */
+    border: 1px solid #ccc; /* Borde más sutil */
+    background-color: #fff; /* Asegurarse de que el fondo sea blanco para mejorar el contraste */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna sutil para profundidad */
+    font-size: 1em; /* Tamaño de fuente uniforme */
 }
 
-.contact-form textarea  {height: 150px;}
+/* Específico para el área de texto */
+.contact-form textarea {
+    height: 120px; /* Altura ajustada para el área de texto */
+    resize: vertical; /* Permitir solo redimensionamiento vertical */
+    resize: none;
+}
 
+/* Estilizar el botón de envío */
 .contact-form input[type="submit"] {
-    padding: 15px 30px; /* Ajuste de espaciado interno */
-    background-color: var(--color-primario); /* Cambio a un color de fondo más vibrante */
-    color: #ffffff; /* Mantenimiento del color del texto */
-    font-weight: bold; /* Negrita para el texto */
-    border-radius: 5px; /* Bordes ligeramente redondeados */
-    transition: all 0.3s ease; /* Suavizado de la transición */
+    width: 100%; /* Hacer que el botón ocupe todo el ancho */
+    padding: 10px 15px; /* Ajustar el relleno */
+    background-color: #38220f; /* Color que se alinea con la identidad de la marca */
+    color: #fff; /* Texto en blanco para contraste */
+    font-size: 1.1em; /* Tamaño de fuente del botón un poco más grande */
+    border: none; /* No hay borde */
+    border-radius: 4px; /* Bordes sutilmente redondeados */
+    cursor: pointer; /* Estilo del cursor para indicar clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar sensación de botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
 }
 
+/* Efecto al pasar el mouse por encima del botón */
 .contact-form input[type="submit"]:hover {
-    background-color: var(--color-secundario); /* Oscurecimiento al pasar el ratón */
-    transform: scale(1.05); /* Ligero aumento de tamaño */
+    background-color: #d6a26e; /* Cambiar a un color más claro al pasar el mouse */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más prominente para efecto 3D */
 }
 
-/* Mejoras para dispositivos móviles */
+/* Ajustes de responsive para móviles */
 @media (max-width: 768px) {
     .contact-section {
-        padding: 30px; /* Ajuste del espaciado interno para móviles */
+        padding: 25px; /* Menor relleno para pantallas pequeñas */
+        margin: 20px auto; /* Margen superior e inferior reducido */
+    }
+
+    .contact-form input[type="submit"] {
+        padding: 10px 15px; /* Ajuste del relleno en dispositivos móviles */
     }
 }
+
 
 
 /* Nosotros */

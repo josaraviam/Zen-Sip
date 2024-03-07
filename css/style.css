@@ -1,34 +1,38 @@
+/* Definición de variables globales para colores y fuentes, promoviendo la consistencia y facilitando cambios globales */
 :root {
-    --color-primario: #38220f; /* Marrón oscuro */
-    --color-secundario: #d6a26e; /* Marrón claro */
-    --color-texto: #ffedc5; /* Crema */
-    --color-texto-hover: #f8f9fa; /* Blanco ligero */
-    --fuente-primaria: 'Slabo 27px', serif;
+    --color-primario: #38220f; /* Marrón oscuro usado como color de fondo principal y para elementos destacados */
+    --color-secundario: #d6a26e; /* Marrón claro usado para contraste en enlaces, botones, etc. */
+    --color-texto: #ffedc5; /* Color crema para el texto principal, proporcionando legibilidad sobre fondos oscuros */
+    --color-texto-hover: #f8f9fa; /* Blanco ligero para efectos hover, mejorando la interactividad visual */
+    --fuente-primaria: 'Slabo 27px', serif; /* Fuente personalizada para todo el texto, mejorando la estética */
 }
 
+/* Estilos básicos para el cuerpo del documento, aplicando la fuente principal y normalizando el margen y padding */
 body, html {
     margin: 0;
     padding: 0;
     font-family: var(--fuente-primaria);
 }
 
+/* Estilos para el encabezado, incluyendo color de fondo, color de texto y posicionamiento para asegurar visibilidad */
 header {
     background: var(--color-primario);
     color: var(--color-texto);
     padding: 10px 0;
     position: relative;
-    z-index: 10; /* Asegúrate de que el encabezado esté por encima de otros elementos */
+    z-index: 10; /* Asegura que el encabezado se mantenga por encima de otros elementos */
 }
 
-
-.header-index { /* Header Index */
+/* Ajustes específicos para el índice del encabezado, mejorando la responsividad y el posicionamiento de imágenes */
+.header-index {
     display: block;
-    max-width: 100%;  /* hace que la imagen sea responsive y no exceda el ancho del contenedor */
-    height: 250px;     /* mantiene la proporción de la imagen */
-    margin: 0 auto 0px; /* centra la imagen y agrega un margen inferior */
-    padding: auto 30px 0; /* centra la imagen y agrega */
-  }
+    max-width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    padding: auto 30px 0;
+}
 
+/* Configuración de la navegación, incluyendo alineación, margen y estilos de enlaces para mejorar la navegabilidad */
 nav {
     width: 80%;
     margin: 0 auto;
@@ -53,14 +57,15 @@ nav ul li a {
     color: var(--color-texto);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Transición suave para el hover */
 }
 
 nav ul li a:hover,
 nav ul li a:active {
-    color: var(--color-texto-hover);
+    color: var(--color-texto-hover); /* Cambio de color al interactuar, mejorando la retroalimentación visual */
 }
 
+/* Estilos para mostrar la fecha y hora actuales, con un formato visual claro y distintivo */
 #currentDateTime {
     font-size: 20px;
     color: #5a5a5a;
@@ -72,11 +77,13 @@ nav ul li a:active {
     width: 200px;
 }
 
+/* Contenedor para carruseles de imágenes, asegurando máxima responsividad y margen adecuado */
 .bxslider-container {
     max-width: 100%;
     margin: 20px auto;
 }
 
+/* Estilos generales para el pie de página, incluyendo colores, alineación y transiciones para enlaces */
 footer {
     background: var(--color-primario);
     color: var(--color-texto);
@@ -88,13 +95,15 @@ footer a {
     color: var(--color-secundario);
     text-decoration: none;
     margin: 0 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transición suave para el hover, mejorando la interactividad */
 }
 
 footer a:hover {
     color: var(--color-texto-hover);
 }
 
+
+/* Estilos para secciones de negocio, incluyendo disposición flexible y alineación, promoviendo un diseño adaptable y cohesivo */
 .business-section {
     display: flex;
     justify-content: space-between;
@@ -104,6 +113,7 @@ footer a:hover {
     padding: 20px;
 }
 
+/* Configuración del contenedor de contenido para centrar elementos y mejorar la estructura visual del sitio */
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -111,64 +121,65 @@ footer a:hover {
     width: 100%;
 }
 
+/* Estilos para el contenedor de imágenes, ajustando su tamaño y espaciado para destacar visualmente en la página */
 .image-container {
-    flex: 1.5; /* Aumentar el tamaño del carrusel de imágenes */
-    padding: 0 20px; /* Añadir algo de espacio alrededor */
+    flex: 1.5; /* Aumenta proporcionalmente el tamaño del contenedor de imágenes respecto a otros elementos */
+    padding: 0 20px; /* Espaciado para evitar que el contenido se pegue a los bordes */
 }
 
-
-/* Asegura que el slider llene el contenedor en todas las resoluciones */
+/* Asegura la responsividad de las imágenes dentro del contenedor, manteniendo su relación de aspecto */
 .image-container img {
-    max-width: 100%; /* Esto hará que la imagen sea completamente responsiva */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    max-width: 100%; /* Hace que la imagen se ajuste al ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
 }
 
+/* Estilos para el contenedor de información, ajustando su tamaño y espaciado para una presentación clara del texto */
 .info-container {
-    flex: 1; /* Reducir un poco el tamaño de la información */
-    padding: 0 20px; /* Añadir algo de espacio alrededor */
+    flex: 1; /* Establece una proporción respecto al contenedor de imágenes */
+    padding: 0 20px; /* Espaciado para contenido textual */
 }
 
+/* Mejora la legibilidad y el enfoque visual en los títulos dentro del contenedor de información */
 .info-container h2 {
-    font-size: 1.75rem; /* Aumentar el tamaño de la fuente para los títulos */
-    color: var(--color-secundario); /* Cambiar el color para destacar */
-    margin: 20px 0; /* Ajustar los márgenes */
+    font-size: 1.75rem; /* Tamaño de fuente mayor para destacar */
+    color: var(--color-secundario); /* Color para contraste y coherencia visual */
+    margin: 20px 0; /* Espaciado para separar del contenido adyacente */
 }
 
-
+/* Establece el tamaño de fuente y estilo para el texto dentro del contenedor de información */
 .info-container p {
-    font-size: 1em;
+    font-size: 1em; /* Tamaño de fuente estándar para texto */
 }
 
-/* Media queries para dispositivos más pequeños */
+/* Adaptaciones para dispositivos móviles, modificando la disposición de elementos para una mejor experiencia de usuario en pantallas pequeñas */
 @media (max-width: 768px) {
     .business-section, .content-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la disposición a vertical */
     }
 
-    /* Asegura que el mapa y el cuadro de ubicación se centren correctamente */
-    .info-container,
-    .image-container {
-        width: 100%;
+    /* Ajustes específicos para contenedores de información e imágenes en dispositivos móviles */
+    .info-container, .image-container {
+        width: 100%; /* Ocupan el ancho completo de la pantalla */
         padding-right: 0;
         padding-left: 0;
-        margin-top: 20px; /* Espacio adicional en la parte superior para la separación */
+        margin-top: 20px; /* Espaciado superior para separar los elementos visualmente */
     }
 
     .info-container iframe {
-        width: 600px; /* Ajustar el ancho del iframe al contenedor */
-        height: 400px; /* Asegurar que la altura sea proporcional */
-        border: none; /* Remover el borde para un look más limpio */
-        border-radius: 8px; /* Añadir bordes redondeados para consistencia */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra suave para destacar el mapa */
-        margin-top: 20px; /* Añadir un margen superior */
+        width: 100%; /* El iframe se ajusta al ancho del contenedor */
+        height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+        border: none; /* Se elimina el borde para un look más limpio */
+        border-radius: 8px; /* Bordes redondeados para coherencia visual */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+        margin-top: 20px; /* Espaciado superior para separación visual */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Los elementos del menú se disponen verticalmente */
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Añade espacio entre las opciones del menú */
+        margin-bottom: 10px; /* Espaciado entre elementos del menú para facilitar la navegación táctil */
     }
 }
 
@@ -502,7 +513,7 @@ margin-bottom: 20px;
     vertical-align: middle;
 }
 
-/* FAQ Section Styling */
+
 .faq-container {
     max-width: 800px;
     margin: 40px auto;
@@ -527,7 +538,7 @@ margin-bottom: 20px;
     text-align: justify;
 }
 
-/* Map Section Styling */
+
 .map-container {
     max-width: 800px;
     margin: 40px auto;
@@ -544,7 +555,7 @@ margin-bottom: 20px;
 
 #map iframe {
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     border-radius: 8px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

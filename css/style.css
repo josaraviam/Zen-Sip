@@ -239,6 +239,7 @@ footer a:hover {
     font-weight: bold; /* Negrita para el título */
 }
 
+
 /* Estilos para las etiquetas */
 .contact-form label {
     color: #38220f; /* Color alineado con la paleta */
@@ -299,6 +300,45 @@ footer a:hover {
     }
 }
 
+    /* Estilos para la sección de términos y condiciones */
+    .terminos {
+        margin-top: 20px; /* Espacio por encima de la sección de términos */
+        display: flex;
+        align-items: center; /* Alineación vertical de la casilla y la etiqueta */
+        gap: 10px; /* Espacio entre la casilla y la etiqueta */
+    }
+
+    /* Personalización de la casilla de verificación */
+    .terminos input[type="checkbox"] {
+        accent-color: #38220f; /* Color de la casilla para navegadores que soporten esta propiedad */
+        cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+    }
+
+    /* Estilo para la etiqueta de los términos y condiciones */
+    .terminos label {
+        color: #555; /* Color que concuerde con la paleta del formulario */
+        cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+        user-select: none; /* Evitar la selección del texto al hacer clic */
+    }
+
+    /* Estilo para los mensajes de error */
+    .error {
+        color: #cc0000; /* Color rojo para mensajes de error */
+        font-size: 0.9em; /* Tamaño de fuente para el mensaje de error */
+        display: none; /* Ocultar por defecto */
+        margin-top: 10px; /* Espacio arriba del mensaje de error */
+        /* Añadir más estilos si es necesario */
+    }
+
+    /* Si el error es visible, cambiar su estilo */
+    .error.visible {
+        display: block; /* Mostrar mensaje de error */
+    }
+
+    /* Hacer que el botón de envío esté alineado con la casilla de términos */
+    .contact-form input[type="submit"] {
+        margin-top: 20px; /* Espacio adicional si es necesario */
+    }
 
 
 /* Nosotros */
@@ -460,4 +500,52 @@ margin-bottom: 20px;
     /* Estilos para el contenido de fecha y hora */
     display: inline-block;
     vertical-align: middle;
+}
+
+/* FAQ Section Styling */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.faq-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-container .faq h3 {
+    color: #38220f;
+    margin-top: 20px;
+}
+
+.faq-container .faq p {
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+/* Map Section Styling */
+.map-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.map-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

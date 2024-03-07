@@ -1,50 +1,217 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Slabo 27px', serif;
+}
+
+
+
+header {
+    background: #38220f; /* Dark background for the header */
+    max-width: 100%;  /* hace que la imagen sea responsive y no exceda el ancho del contenedor */
+    height: auto;     /* mantiene la proporción de la imagen */
+    margin: 0 auto 10px; /* centra la imagen y agrega un margen inferior */
+    color: white;
+    padding: 10px 0;
+}
+
+.header-index { /* Header Index */
+    display: block;
+    max-width: 100%;  /* hace que la imagen sea responsive y no exceda el ancho del contenedor */
+    height: 250px;     /* mantiene la proporción de la imagen */
+    margin: 0 auto 0px; /* centra la imagen y agrega un margen inferior */
+    padding: auto 10px 0; /* centra la imagen y agrega */
+  }
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #000;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #555;
+nav ul li a:hover,
+nav ul li a:active {
+    color: #f8f9fa; /* Light color on hover */
 }
+
+.hero-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+  
+  #currentDateTime {
+    font-size: 20px; /* Tamaño de fuente */
+    color: #5a5a5a; /* Color del texto */
+    background-color: #f0f0f0; /* Color de fondo */
+    border: 1px solid #dcdcdc; /* Borde alrededor del elemento */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto */
+    margin: 10px; /* Margen alrededor del elemento */
+    width: 200px; /* Ancho del elemento */
+    display: block; /* Esto hará que ocupe su propia línea */
+    margin-left: auto; /* Estos dos márgenes automáticos centrarán */
+    margin-right: auto; /* el elemento si su contenedor es más ancho */
+  }
+  
 
 .bxslider-container {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 20px auto;
 }
 
-.team-member {
-    margin-bottom: 20px;
+.google-map {
+    width: 300px;
+    height: 200px;
+    border: 0;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
+footer {
+    background: #38220f; /* Un marrón oscuro para el fondo del footer */
+    color: #ffedc5; /* Un color crema para el texto */
+    padding: 20px 0;
+    font-size: 0.8em;
 }
 
-.contact-form input,
-.contact-form textarea {
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #d4a373; /* Un color marrón claro para los enlaces */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f3e9dd; /* Un color crema más claro al pasar el ratón */
+}
+
+.business-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin-bottom: 20px;
 }
 
-/* Responsividad */
+.image-container {
+    flex: 1; /* Adjust the flex ratio to suit your design */
+    padding-right: 20px; /* Add spacing between the image and the info */
+}
+
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Limit the image size */
+}
+
+.info-container {
+    flex: 2; /* Adjust the flex ratio to suit your design */
+    padding-left: 20px; /* Add spacing between the info and the image */
+}
+
+.info-container h2 {
+    margin-top: 0;
+}
+
+.info-container p {
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    .business-section,
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .info-container {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fff8f0; /* Un color crema claro */
+    border-radius: 6px;
+    color: #50372a; /* Un marrón oscuro para el texto */
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8B4513; /* Un tono marrón medio para los títulos */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #a88760; /* Un color marrón claro para el borde */
+    background-color: #fffaf2; /* Un color crema muy claro para el fondo */
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none; /* Deshabilitar redimensionamiento */
+  }
+  
+  .contact-form button[type="submit"] {
+    padding: 15px;
+    background-color: #6b4e37; /* Un marrón oscuro para el botón */
+    color: #fffaf2; /* Color crema para el texto del botón */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #8B4513; /* Un marrón medio para cuando se pasa el ratón por encima */
+  }
+  

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zen Sip</title>
+    <link rel="icon" href="img/faviconW.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -11,10 +13,10 @@
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
 </head>
-
 <body>
+    <img src="img/SenZip-NH.png" alt="" class="header-index">
+
     <header>
-        <!-- Menú de navegación -->
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -25,31 +27,42 @@
     </header>
     <div id="currentDateTime"></div>
 
-    <section class="bxslider-container">
-        <ul class="bxslider">
-            <li><img src="img/image1.jpg" alt="Imagen 1"></li>
-            <li><img src="img/image2.jpg" alt="Imagen 2"></li>
-            <li><img src="img/image3.jpg" alt="Imagen 3"></li>
-            <li><img src="img/image4.jpg" alt="Imagen 4"></li>
-        </ul>
-    </section>
-
     <!-- Sección de Dirección y Horarios -->
-    <section>
-        <h2>Dirección y Horarios</h2>
-        <p></p>
-    </section>
-
-    <!-- TODO: Integración de Mapa Interactivo -->
-    <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d930.5091456601167!2d-89.61216242477525!3d21.111107652291615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1709772135014!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="business-section">
+        <div class="content-wrapper">
+            <div class="image-container">
+                <ul class="bxslider">
+                    <li><img src="img/1.jpg" alt="Imagen 1"></li>
+                    <li><img src="img/3.jpg" alt="Imagen 2"></li>
+                    <li><img src="img/4.jpg" alt="Imagen 2"></li>
+                    <li><img src="img/301154776_1361118651048383_4495542201725068554_n.webp" alt="Imagen 2"></li>
+                    <!-- Añade más elementos <li> con imágenes si es necesario -->
+                </ul>
+            </div>            
+            <div class="info-container">
+                <h2>Zen Sip</h2>
+                <p>If we go deeper into the historic center on street 59 x between 66 y 68, you will find Manifesto Casa Tostadora Calabrese, a place specialized in coffee beans where you can find flavors and different ways to enjoy a delicious hot or cold drink. They also have a branch in Colonia Mexico on Calle8 #107 por 27 y 29.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d930.5091456601167!2d-89.61216242477525!3d21.111107652291615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1709772135014!5m2!1ses-419!2smx" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!-- Your Google Maps embed link -->
+                <div class="contact-details">
+                    <span>⭐ 5 stars on google (14 comments)</span> <br>
+                    <span>📞 +521234567890</span> <br>
+                    <span>🌐 Sempere</span> <br>
+                    <span>🕒 Horario: Sábado y Domingo de 9 a.m a 7 p.m</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
+        <p>© 2024 Zen Sip - Todos los derechos reservados.</p>
+        <p>Visítanos en la dirección ficticia, Ciudad, País.</p>
+        <p>Conéctate con nosotros:</p>
+        <a href="http://facebook.com/ZenSip">Facebook</a> | 
+        <a href="http://instagram.com/ZenSip">Instagram</a> |
+        <a href="http://twitter.com/ZenSip">Twitter</a>
+        <br>
         <a href="#top">Ir arriba</a>
-        <!--TODO: Información del footer -->
     </footer>
-
     <!-- Script para cargar el mapa -->
     <script src="js/map.js"></script>
 </body>

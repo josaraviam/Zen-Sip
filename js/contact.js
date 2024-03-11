@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
+        const termsCheckbox = document.getElementById('terminos');
 
         // Validación de campo requerido para el nombre
         if (name.trim() === '') {
@@ -34,8 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Si todo está correcto, aquí puedes proceder a enviar el formulario.
-        // Por ejemplo: form.submit();
+        // Validación para asegurar que los términos y condiciones están aceptados
+        if (!termsCheckbox.checked) {
+            alert('Debe aceptar los términos y condiciones para enviar el formulario.');
+            return;
+        }
+
+        // Si todo está correcto, se envía el formulario.
         alert('Formulario enviado con éxito.');
     });
 

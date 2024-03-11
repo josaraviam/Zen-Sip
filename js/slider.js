@@ -5,5 +5,3 @@ $(document).ready(function(){
       slideWidth: 600
     });
   });
-  
-  
